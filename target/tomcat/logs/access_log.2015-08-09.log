@@ -1,0 +1,9 @@
+127.0.0.1 [09/Aug/2015:00:02:14 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 -
+127.0.0.1 [09/Aug/2015:00:19:39 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 -
+127.0.0.1 [09/Aug/2015:00:20:29 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 -
+127.0.0.1 [09/Aug/2015:00:20:50 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 -
+127.0.0.1 [09/Aug/2015:00:32:32 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 58
+127.0.0.1 [09/Aug/2015:00:39:27 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 62
+127.0.0.1 [09/Aug/2015:00:41:21 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 62
+127.0.0.1 [09/Aug/2015:00:42:04 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 54
+127.0.0.1 [09/Aug/2015:00:42:44 -0400] "GET /getLocationAndDate?input=%22Anyone%20leaving%20from%20St.%20Augustine%20to%20Gainesville%20today?%22 HTTP/1.1" 200 51
