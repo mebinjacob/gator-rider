@@ -62,6 +62,9 @@ public class GroupController {
 			Process proc = rt.exec(new String[]{"src/main/resources/NLP/informationExtraction1.py", input});
 			int exitVal = proc.waitFor();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+			BufferedReader errorReader = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
+			String errorLine;
+			while((errorLine = errorReader.readLine()) != null){System.err.println(errorLine);}
 			String aux;
 			if((aux=reader.readLine())!= null)
 				locations = aux;
