@@ -15,7 +15,7 @@ import sys
 mergedSpaceSeperatorConstant = '-';
 stanfordLocation = []
 stanfordDate = []
-baseLocation='/usr/local/etc' # this would change on server
+baseLocation='../NLP/' # this would change on server
 line = sys.argv[1]
 
 #Chaining functions together
@@ -65,7 +65,6 @@ def stanfordNERExtractor(sentence):
     return st.tag(sentence.split())
 
 findNamedEntity()
-fileToCommunicate = open('/home/mebin/Desktop/Lawrence/locationsDate.txt', 'w+')
 
 print stanfordLocation
 print stanfordDate
