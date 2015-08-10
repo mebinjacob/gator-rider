@@ -11,11 +11,13 @@ import nltk
 import re
 from nltk.util import trigrams
 import sys
+import os
 
 mergedSpaceSeperatorConstant = '-';
 stanfordLocation = []
 stanfordDate = []
-baseLocation='../NLP/' # this would change on server
+baseLocation=os.getcwd() + '/'
+print baseLocation
 line = sys.argv[1]
 
 #Chaining functions together
