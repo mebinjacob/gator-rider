@@ -17,7 +17,6 @@ mergedSpaceSeperatorConstant = '-';
 stanfordLocation = []
 stanfordDate = []
 baseLocation=os.getcwd() + '/'
-print baseLocation
 line = sys.argv[1]
 
 #Chaining functions together
