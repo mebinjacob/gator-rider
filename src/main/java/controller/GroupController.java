@@ -20,7 +20,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -52,12 +54,12 @@ public class GroupController {
 
 	@RequestMapping(value = "/getLocationAndDate", method = RequestMethod.GET)
 	@ResponseBody
-	public List<String> getLocationAndDate(@RequestParam String input) {
+	public Map<String,List<String>> getLocationAndDate(@RequestParam String input) {
 		String locations = null;
 		String dates = null;
 		try {
 			Runtime rt = Runtime.getRuntime();
-			Process proc = rt.exec(new String[]{"/home/mebin/Desktop/Lawrence/informationExtraction1.py", input});
+			Process proc = rt.exec(new String[]{"src/main/resources/NLP/informationExtraction1.py", input});
 			int exitVal = proc.waitFor();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));
 			String aux;
@@ -70,15 +72,19 @@ public class GroupController {
 		} catch (Throwable t) {
 			t.printStackTrace();
 		}
+		Map<String, List<String>> output = new HashMap<String, List<String>>();
 		List<String> locationAndDate = new ArrayList<String>();
-		locations = locations.replace("[", "");
-		locations = locations.replace("]", "");
-		locations = locations.replace("u'", "");
-		locations = locations.replace("'", "");
-		String[] split = locations.split(",");
-		locationAndDate.addAll(Arrays.asList(split));
-		locationAndDate.add(dates);
-		return locationAndDate;
+		if (locations != null) {
+			locations = locations.replace("[", "");
+			locations = locations.replace("]", "");
+			locations = locations.replace("u'", "");
+			locations = locations.replace("'", "");
+			String[] split = locations.split(",");
+			output.put("locations", Arrays.asList(split));
+		}
+		if(dates != null)
+		output.put("dates",	Arrays.asList(dates.split(",")));
+		return output;
 	}
 
 	public static void main(String[] args) throws Exception {
