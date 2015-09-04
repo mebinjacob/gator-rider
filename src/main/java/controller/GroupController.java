@@ -49,7 +49,8 @@ public class GroupController {
 				"FSU - USF - UCF - UF Carpool"));
 		groupList.add(new Group("388163574548799", "UF Rides"));
 		groupList.add(new Group("281301421940210", "UF to MIAMI Ride Board"));
-		groupList.add(new Group("1447911062184823", "Test group"));
+		groupList.add(new Group("1626552287629274", "UF Chinese Student Ride"));
+		groupList.add(new Group("114824175187181", "Name:GatorideGroup"));
 		return groupList;
 	}
 
