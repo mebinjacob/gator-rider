@@ -50,7 +50,7 @@ public class GroupController {
 		groupList.add(new Group("388163574548799", "UF Rides"));
 		groupList.add(new Group("281301421940210", "UF to MIAMI Ride Board"));
 		groupList.add(new Group("1626552287629274", "UF Chinese Student Ride"));
-		groupList.add(new Group("114824175187181", "Name:GatorideGroup"));
+		groupList.add(new Group("114824175187181", "GatorideGroup"));
 		return groupList;
 	}
 
